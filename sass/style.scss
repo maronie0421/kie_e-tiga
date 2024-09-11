@@ -1,0 +1,121 @@
+@use "sass:map";
+
+$font-base: "Noto Sans JP", sans-serif;
+$text-color:#333;
+
+$breakpoints: (
+  sp: "screen and (max-width: 428px)",
+  pc: "screen and (min-width: 429px)",
+);
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+  @content;
+}
+}
+
+
+body {
+  font-family: $font-base;
+  color: $text-color;
+  background: linear-gradient(180deg, #EAF4F7 0%, #FFF 100%);
+}
+
+.header {
+  height: 800px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.inner {
+  padding-inline: 15px;
+
+  @include mq(pc) {
+    padding-inline: 40px;
+  }
+}
+
+.header__logo {
+  img {
+    width: 160px;
+    height: 32px;
+  }
+}
+
+.header__icon {
+
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.drawer-icon {
+  width: 40px;
+  height: 20px;
+  position: relative;
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: #2082E0;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 10px;
+  }
+  &:nth-child(3) {
+    top: 20px;
+  }
+}
+
+.header__nav {}
+
+.header__lists {
+  display: none;
+
+  @include mq(pc) {
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+}
+
+.header__list {
+  @include mq(pc) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header__link {
+  img {}
+}
+
+.header__button {
+@include mq(pc) {
+  color: #F6F7F7;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: inline-flex;
+  padding: 9px 54px;
+  border-radius: 48px;
+  background: linear-gradient(90deg, #2188DE 1.75%, #2BCBC6 97.75%);
+  box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+}
+}
