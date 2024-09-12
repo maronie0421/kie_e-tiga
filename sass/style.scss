@@ -17,23 +17,35 @@ $breakpoints: (
 
 body {
   font-family: $font-base;
+  line-height: 1.7;
   color: $text-color;
   background: linear-gradient(180deg, #EAF4F7 0%, #FFF 100%);
 }
 
-.header {
-  height: 800px;
+.inner {
+  padding-inline: 15px;
+
 }
+
+.button {
+  color: #F6F7F7;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: inline-flex;
+  padding: 9px 54px;
+  border-radius: 48px;
+  background: linear-gradient(90deg, #2188DE 1.75%, #2BCBC6 97.75%);
+  box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+}
+
+.header {}
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
-}
-
-.inner {
-  padding-inline: 15px;
 
   @include mq(pc) {
     padding-inline: 40px;
@@ -119,3 +131,73 @@ body {
   box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
 }
 }
+
+.mv {}
+
+.mv__inner {
+  @include mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-inline: 80px;
+
+  }
+}
+
+.mv__image {
+  margin-top: 44px;
+  text-align: center;
+  img {
+    width: 398px;
+    height: 285px;
+
+    @include mq(pc) {
+      width: 650px;
+      height: 438px;
+    }
+  }
+}
+
+.mv__content {
+  margin-top: 40px;
+  text-align: center;
+
+  @include mq(pc) {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.mv__logo {
+  margin-top: 20px;
+  img {
+    width: 250px;
+    height: 50px;
+  }
+}
+
+.mv__title  {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+
+  @include mq(pc) {
+    margin-top: 24px;
+    font-size: 26px;
+  }
+}
+
+.mv__description {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.0; /* 32px */
+}
+
+.mv__button {
+  margin-top: 30px;
+
+}
+
+
