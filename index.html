@@ -53,9 +53,11 @@
   <!--main-->
   <div class="mv">
     <div class="mv__inner inner">
-      <div class="mv__image">
-        <img src="./img/sp/sp-first-view.png" alt="">
-      </div>
+      <picture class="mv__image"> <!-- pictureタグを使ってウィンドウサイズによって画像を切り替える -->
+        <source media="(min-width: 429px)" srcset="./img/first-view.png" /> <!-- 429px以上の時の画像を指定することができる -->
+        <img src="./img/sp/sp-first-view.png" alt=""> <!-- 通常の時の画像をいれる(SP) -->
+      </picture>
+
 
       <div class="mv__content">
         <span class="mv__logo"><img src="./img/logo.png" alt=""></span>

@@ -143,6 +143,10 @@ body {
     padding-inline: 15px;
     justify-content: space-between;
     align-items: center;
+
+    @include mq(pc) {
+      padding-inline: 40px;
+    }
 }
 
 .header__logo {
@@ -156,15 +160,33 @@ body {
 
 .header__nav {
   display: none;
+
+  @include mq(pc) {
+    display: flex;
+ }
 }
 
-.header__lists {}
 
-.header__list {}
+
+.header__lists {
+  @include mq(pc) {
+    display: flex;
+  }
+}
+
+.header__list {
+  a {
+    display: inline-block;
+    padding: 26px 22px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
 
 .header__link {}
 
 .header__button {
+  padding: 20px 0 14px 22px;
   a {
     color: #F6F7F7;
     text-align: center;
@@ -187,6 +209,10 @@ body {
   position: relative;
   width: 40px;
   height: 20px;
+
+  @include mq(pc) {
+    display: none;
+  }
 }
 
 .drawer-icon__bar {
@@ -217,6 +243,7 @@ body {
 .mv {}
 
 .mv__inner {
+  margin-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -231,22 +258,13 @@ body {
 }
 
 .mv__image {
-  margin-top: 20px;
+  width: 398px;
   text-align: center;
 
   @include mq(pc) {
     margin-top: 30px;
+    width: 650px;
   }
-
-  img {
-    width: 398px;
-
-    @include mq(pc) {
-      width: 650px;
-    }
-  }
-
-
 }
 
 .mv__content {
