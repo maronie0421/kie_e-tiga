@@ -4,8 +4,13 @@ $font-base: "Noto Sans JP", sans-serif;
 $text-color:#333;
 
 $breakpoints: (
-  sp: "screen and (max-width: 428px)",
-  pc: "screen and (min-width: 429px)",
+  // sp: "screen and (max-width: 428px)",
+  // pc: "screen and (min-width: 429px)",
+
+  sm: "screen and (min-width: 320px)",
+  sp: "screen and (min-width: 768px)",
+  pc: "screen and (min-width: 900px)",
+  xl: "screen and (min-width: 1280px)",
 );
 
 @mixin mq($breakpoint: md) {
@@ -213,16 +218,129 @@ body {
 
 
 
-.section {}
+// .section {}
 
-.blog {}
+// .blog {}
+
+// .blog__inner {
+//   background: #FFF;
+//   padding: 60px 38px 60px 30px;
+// }
+
+// .blog__head {
+//   color: #228DDD;
+//   font-family: Montserrat;
+//   font-size: 36px;
+//   font-weight: 700;
+//   letter-spacing: 3.6px;
+// }
+
+// .blog__head-title {
+//   color: #228BDE;
+//   font-size: 14px;
+//   font-weight: 400;
+//   letter-spacing: 2.66px;
+// }
+
+// .blog__cards {
+//   margin-top: 46px;
+
+//   @include mq(xl) {
+//     display: grid;
+//     grid-template-columns: repeat(3, 2fr);
+//     gap: 34px 20px;
+//   }
+// }
+
+// .blog__card {
+//   text-align: center;
+//   width: 360px;
+//   height: 326px;
+//   padding: 12px 15px 16px 12px;
+//   border-radius: 4px;
+//   background: #FFF;
+//   box-shadow: 5px 7px 34px 0px #F1F1F1;
+// }
+
+// .blog__image {
+//   position: relative;
+//   width: 330px;
+//   img {
+//     width: 100%;
+//   }
+// }
+
+// .blog__label {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   color: #FFF;
+//   text-align: center;
+//   font-size: 12px;
+//   font-weight: 700;
+//   background: #2392DB;
+//   padding: 3px 32px;
+// }
+
+// .blog__body {
+//   margin-top: 6px;
+// }
+
+// .blog__title {
+//   font-size: 15px;
+//   font-weight: 700;
+// }
+
+// .blog__text {
+//   margin-top: 4px;
+//   font-size: 13px;
+//   font-weight: 400;
+// }
+
+// .blog__button {
+//   margin-top: 46px;
+//   a {}
+// }
+
+
+.blog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(sp) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 
 .blog__inner {
-  background: #FFF;
-  padding: 60px 38px 60px 30px;
+  padding-left: 30px;
+  padding-right: 38px;
+
+  @include mq(sp) {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  @include mq(xl) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .blog__head {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(sp) {
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    margin-left: 80px;
+  }
+}
+
+.blog__head-title_1 {
   color: #228DDD;
   font-family: Montserrat;
   font-size: 36px;
@@ -230,7 +348,7 @@ body {
   letter-spacing: 3.6px;
 }
 
-.blog__head-title {
+.blog__head-title_2 {
   color: #228BDE;
   font-size: 14px;
   font-weight: 400;
@@ -239,19 +357,27 @@ body {
 
 .blog__cards {
   margin-top: 46px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 
-  @include mq(pc) {
+  @include mq(sp) {
+    margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(2, 3fr);
     gap: 34px 20px;
   }
+
+  @include mq(xl) {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+
 }
 
 .blog__card {
   text-align: center;
-  width: 360px;
-  height: 326px;
-  padding: 12px 15px 16px 12px;
+  padding: 12px 15px 16px 15px;
   border-radius: 4px;
   background: #FFF;
   box-shadow: 5px 7px 34px 0px #F1F1F1;
@@ -259,7 +385,6 @@ body {
 
 .blog__image {
   position: relative;
-  width: 330px;
   img {
     width: 100%;
   }
@@ -270,29 +395,46 @@ body {
   top: 0;
   right: 0;
   color: #FFF;
-  text-align: center;
   font-size: 12px;
   font-weight: 700;
+  width: 100px;
+  height: 24px;
   background: #2392DB;
-  padding: 3px 32px;
 }
 
-.blog__body {
-  margin-top: 6px;
-}
+.blog__body {}
 
 .blog__title {
+  margin-top: 6px;
+  text-align: left;
   font-size: 15px;
   font-weight: 700;
 }
 
 .blog__text {
   margin-top: 4px;
+  text-align: left;
   font-size: 13px;
   font-weight: 400;
 }
 
 .blog__button {
   margin-top: 46px;
-  a {}
+  text-align: center;
+  a{
+    display: inline-flex;
+    padding: 9px 54px;
+    border-radius: 48px;
+    background: linear-gradient(90deg, #2188DE 1.75%, #2BCBC6 97.75%);
+    box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+    color: #F6F7F7;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  @include mq(sp) {
+    margin-top: 60px;
+  }
 }
