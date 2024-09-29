@@ -336,7 +336,11 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 28px;
-    margin-left: 80px;
+    margin-left: 33px;
+  }
+
+  @include mq(xl) {
+    margin-left: 0;
   }
 }
 
@@ -359,7 +363,7 @@ body {
   margin-top: 46px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
 
   @include mq(sp) {
     margin-top: 60px;
@@ -369,6 +373,7 @@ body {
   }
 
   @include mq(xl) {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
   }

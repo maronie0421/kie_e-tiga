@@ -262,7 +262,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 28px;
-    margin-left: 80px;
+    margin-left: 33px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .blog__head {
+    margin-left: 0;
   }
 }
 
@@ -288,7 +293,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
 }
 @media screen and (min-width: 768px) {
   .blog__cards {
@@ -300,6 +305,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .blog__cards {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
   }
