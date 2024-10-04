@@ -378,3 +378,37 @@ body {
     margin-top: 60px;
   }
 }
+
+.news {
+  padding-top: 60px;
+  padding-top: 60px;
+}
+
+.news__inner {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.news__title {
+  position: relative;
+  color: #238FDC;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.news__title::before {
+  position: absolute;
+  bottom: -6px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 3px;
+  content: "";
+  background: #2BC8C8;
+}
+
+.news__card {
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
