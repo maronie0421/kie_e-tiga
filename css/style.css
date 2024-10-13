@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.7;
@@ -381,7 +382,7 @@ body {
 
 .news {
   padding-top: 60px;
-  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .news__inner {
@@ -411,4 +412,51 @@ body {
 .news__card {
   padding-top: 46px;
   padding-bottom: 46px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 13px;
+  gap: 20px;
+}
+
+.page-item {
+  color: #707070;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 1.44px;
+}
+
+.page-link {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border: 1px solid #828282; /* 枠線 */
+}
+
+.news__button {
+  margin-top: 30px;
+  text-align: center;
+}
+.news__button a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #2392DB;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 3px;
+  padding: 5px 24px;
+  border-radius: 2px;
+  border: 1px solid #2392DB;
+  -webkit-box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
 }
