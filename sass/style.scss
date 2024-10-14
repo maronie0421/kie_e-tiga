@@ -531,6 +531,7 @@ body {
 
   @include mq(pc) {
     flex-direction: row;
+    gap: 0;
   }
 }
 
